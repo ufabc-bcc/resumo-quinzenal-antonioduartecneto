@@ -16,7 +16,7 @@
 ```
 Programas são avaliações/composições de funções que não alteram estados; dados são imutáveis. Isso reduz a quantidade de bugs.
 ```
-- Baseia-se no cálculo lambda;
+- Baseia-se no cálculo λ;
 - Programas são declarativos, mas sem limitações do paradigma declarativo;
 - Faz-se uso de um garbage collector para resolver as limitações que a imutabilidade de dados impõe;
 - Usa funções puras: funções que não apresentam efeito colateral; para uma mesma entrada, sempre retornam o mesmos valor;
@@ -25,7 +25,7 @@ Programas são avaliações/composições de funções que não alteram estados;
 
 # SEMANA 2
 
-## Cálculo Lambda
+## Cálculo λ
 - Haskell é uma linguagem funcional cujo funcionamento se baseia no cálculo λ.
 
 - O cálculo λ é uma alternativa teórica às máquinas de Turing como fundamento teórico para os computadores modernos.
