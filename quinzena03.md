@@ -21,5 +21,47 @@ class Monoid a where
 
 
 ### Functores
+
+Functors são funções que fazem com que as funções de um certo tipo sejam aplicáveis a um tipo paramétrico contendo esse tipo.
+
+No Haskell um Functor é definido como uma classe de tipos:
+
+```haskell
+
+class Functor f where
+   fmap :: (a -> b) -> f a -> f b
+
+
+```
+
 ### Funtores Aplicativos
+
+Applicative têm sua classe de tipo definida como:
+
+```haskell
+
+class Functor f => Applicative f where
+  pure  :: a -> f a
+  (<*>) :: f (a -> b) -> f a -> f b
+
+
+```
+
 ### Traversable
+
+Traversables são tipos que podem ser mapeados. A sua classe pode ser definida como:
+
+```haskell
+
+class (Functor t, Foldable t) => Traversable t where
+  traverse :: Applicative f =>
+			    (a -> f b) -> t a -> f (t b)
+
+instance Traversable [] where
+  traverse g []     = pure []
+  traverse g (x:xs) = pure (:) <*> g x <*> traverse g xs
+
+
+```
+
+
