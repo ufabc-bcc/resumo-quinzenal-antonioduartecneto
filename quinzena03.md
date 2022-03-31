@@ -1,4 +1,4 @@
-### Monoids; Foldable
+### Monoids
 
 Um Monoid é um conjunto de valores associados a um operador binário associativo e um elemento identidade:
 
@@ -19,6 +19,7 @@ class Monoid a where
 
 ```
 
+### Foldable
 
 A classe dos Foldables pode ser definido como a seguir:
 
