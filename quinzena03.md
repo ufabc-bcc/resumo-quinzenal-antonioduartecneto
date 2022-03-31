@@ -20,6 +20,20 @@ class Monoid a where
 ```
 
 
+A classe dos Foldables pode ser definido como a seguir:
+
+```haskell
+
+class Foldable t where
+   fold    :: Monoid a => t a -> a
+   foldMap :: Monoid b => (a -> b) -> t a -> b
+   foldr   :: (a -> b -> b) -> b -> t a -> b
+   foldl   :: (a -> b -> a) -> a -> t b -> a
+
+
+```
+
+
 ### Functores
 
 Functors são funções que fazem com que as funções de um certo tipo sejam aplicáveis a um tipo paramétrico contendo esse tipo.
