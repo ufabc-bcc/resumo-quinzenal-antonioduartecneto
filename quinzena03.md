@@ -49,7 +49,7 @@ class Functor f where
 
 ```
 
-### Funtores Aplicativos
+### Functores Aplicativos
 
 Applicative têm sua classe de tipo definida como:
 
