@@ -167,4 +167,16 @@ instance Traversable [] where
   traverse g (x:xs) = pure (:) <*> g x <*> traverse g xs
 ```
 
+Se usassemos o seguinte código:
 
+```haskell
+dec :: Int -> Maybe Int
+dec x | x <= 0    = Nothing
+      | otherwise = Just (x - 1)
+
+```
+
+teríamos que traverse dec [1,2,3] resultaria no seguinte:
+```
+>> Just [0,1,2]
+```
